@@ -1,4 +1,8 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +12,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
     <div>Created At: {{ creationDate | date : 'short' }}</div>
     <app-channel [name]="name"></app-channel>
   `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   name = 'Channel Name';
