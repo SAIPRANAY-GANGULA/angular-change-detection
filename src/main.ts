@@ -3,6 +3,6 @@ import { AppModule } from './app/app.module';
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule, {
-    ngZone: 'noop', // CD doesn't work if we disable Zone.js
+    // ngZone: 'noop', // CD doesn't work if we disable Zone.js
   })
   .catch((err) => console.error(err));

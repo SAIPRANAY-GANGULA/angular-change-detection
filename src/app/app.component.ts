@@ -20,7 +20,6 @@ export class AppComponent {
     setTimeout(() => {
       this.topicName = 'Zone JS in angular';
       console.log('Topic name changed to:' + this.topicName);
-      this.cdr.detectChanges();
     }, 3000);
   }
 
